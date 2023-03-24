@@ -1,0 +1,85 @@
+\documentclass{ctexart}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\title{作业二: 在shell中执行代码之AND Lists}
+
+
+\author{钟谢田 \\ 数学与应用数学3190103159}
+
+\begin{document}
+
+\maketitle
+Shell 脚本含有ADD LIST是怎么回事呢？Shell 脚本相信大家都很熟悉，但是Shell 脚本含有ADD LIST是怎么回事呢，下面就让小编带大家一起了解吧。
+
+Shell 脚本含有ADD LIST，其实就是有LIST包含ADD，大家可能会很惊讶Shell 脚本怎么会含有ADD LIST呢？但事实就是这样，小编也感到非常惊讶。
+
+这就是关于Shell 脚本含有ADD LIST的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！
+\section{介绍与代码}
+有时分支结构需要很多的判断，如果嵌套使用IF的话，不仅不美观，难以维护，而且代码量也很大，十分不利程序员的身心健康。为此，我们可以使用ADD LIST，代码如下：
+
+\begin{verbatim}
+    #!/bin/sh
+
+    touch file_one
+    rm -f file_two
+    rm -f file_drei
+    touch file_funf
+    if [ -f file_one ] && echo "hello" && [ -f file_two ] && echo " There"
+    then 
+        echo "in if"
+    else
+        echo "in else"
+    fi
+    
+    exit 0    
+\end{verbatim}
+
+其中\verb![ -f file_one ] && echo "hello" && [ -f file_two ] && echo " There"!就是我们的ADD LIST了。怎么样，是不是很方便呢？
+
+运行\verb|chmod +x first|使之成为可执行的文件。
+
+\section{运行结果与分析改进}
+运行\verb|./first|结果如下：
+
+\begin{verbatim}
+hello
+in else
+\end{verbatim}
+
+可以注意到\verb| There|并没有被输出，这是因为逻辑表达式短路，在AND语句中遇到了值为假的语句立即结束运行，返回false。
+
+下面结合OR进行了一些修改，运行\verb|./second|：
+
+\begin{verbatim}
+    #!/bin/sh
+
+    touch file_one
+    rm -f file_two
+    rm -f file_drei
+    touch file_funf
+    if [ -f file_one ] && echo "hello" && [ -f file_two ] && echo " There" || [ -f file_drei ] || echo " Vier" && [ -f file_funf ]
+    then 
+        echo "in if"
+    else
+        echo "in else"
+    fi
+    
+    exit 0    
+\end{verbatim}
+
+程序的运行结果是
+
+\begin{verbatim}
+hello
+ Vier
+in if
+\end{verbatim}
+
+文件file\_one与file\_funf生成了，其他文件不存在。
+
+符合预期。
+
+\end{document}
+

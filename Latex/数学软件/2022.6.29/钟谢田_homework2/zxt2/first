@@ -1,0 +1,14 @@
+#!/bin/sh
+
+touch file_one
+rm -f file_two
+rm -f file_drei
+touch file_funf
+if [ -f file_one ] && echo "hello" && [ -f file_two ] && echo " There" || [ -f file_drei ] || echo " Vier" && [ -f file_funf ]
+then 
+    echo "in if"
+else
+    echo "in else"
+fi
+
+exit 0

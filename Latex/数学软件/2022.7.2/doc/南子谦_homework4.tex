@@ -1,0 +1,167 @@
+\documentclass{ctexart}
+
+\usepackage{graphicx}
+
+\usepackage{subfigure}
+
+\usepackage{amsmath}
+
+\usepackage{amsthm}
+\newtheorem{property}{性质}
+
+\usepackage{amssymb}
+
+\usepackage{ulem}
+
+\usepackage{url}
+
+\usepackage{hyperref}
+\hypersetup{hidelinks,
+			colorlinks=true,
+			allcolors=blue,
+			pdfstartview=Fit,
+			breaklinks=true}
+
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm}
+
+\title{生成Mandelbrot Set}
+
+\author{南子谦 \\ 信息与计算科学\quad 3210104676}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+本文主要介绍Mandelbrot Set问题定义及其背景. 将集合中的点在复平面上表示后, 只要计算的点足够多, 其就会展现出无穷的细节及不同的几何分形. 
+\par Mandelbrot Set背后的数学理论对于我来说要求有点高. 本文仅对其一些基本性质和几个主要的分形所具有的性质进行讨论, 并给出一些数值算例对上述性质加以验证.
+\par 同时, 本文还将简单介绍生成Mandelbrot Set图片的迭代算法。
+\end{abstract}
+
+\section{引言}
+Mandelbrot Set具有漂亮的几何分形，只要你计算的点足够多, 不管你把图案放大多少倍, 在现代显示器的分辨率下，都能显示出更加复杂的局部, 这些局部既与整体不同, 又有某种相似的地方. 图案具有无穷无尽的细节和自相似性. 如图1所示分形产生过程, 其中后一个图均是前一个图的某一局部放大: 
+\begin{figure}[!ht]
+	\centering
+	\subfigure[]
+	{
+		\begin{minipage}{1.4in}
+		\centering
+		\includegraphics[width=1.2in]{4.jpg}
+		\end{minipage}
+	}
+	\subfigure[]
+	{
+		\begin{minipage}{1.4in}
+		\centering
+		\includegraphics[width=1.2in]{3.jpg}
+		\end{minipage}
+	}
+	\subfigure[]
+	{
+		\begin{minipage}{1.4in}
+		\centering
+		\includegraphics[width=1.2in]{2.jpg}
+		\end{minipage}
+	}
+	\subfigure[]{
+		\begin{minipage}{1.4in}
+		\centering
+		\includegraphics[width=1.2in]{1.jpg}
+		\end{minipage}
+	}
+	\caption{将细节放大后的结果}
+\end{figure}
+
+\section{背景}
+Mandelbrot Set源于复动力学, 最早于1978年被Robert W. Brooks和Peter Matelski定义, 并被作为研究Kleinian群的一部分. 1980年3月1日, 在IBM的Benoit Mandelbrot首次将该集合可视化.
+Mandelbrot在1980年发表的一篇文章中研究了二次多项式的参数空间. 曼德尔布罗集的数学研究实际上始于数学家Adrien Douady和John Hubbard 1985年起的工作. 他们确立了许多基本属性,
+并以Mandelbrot命名来纪念其在分形几何方面有影响力的工作.数学家Heinz-Otto Peitgen 和 Peter Richter以用照片, 书籍宣传该分形而闻名.
+1985年8月\textit{Scientific American}的封面文章向广大受众介绍了计算曼德尔布罗特集的算法. 封面由不来梅大学的Peitgen, Richter和Saope创作. 
+Mandelbrot Set在20世纪80年代中期作为计算机图形演示变得突出, 当时个人计算机变得足够强大, 可以以高分辨率绘制和显示该集.Douady和Hubbard的工作恰逢人们对复动力学和抽象数学的兴趣大幅增加. 自那以后, 
+对Mandelbrot集的研究一直是该领域的核心. 自那时以来, 所有对理解此集合做出贡献的人的详尽名单很长, 但必然会包括Jean-Christophe Yoccoz, Mitsuhiro Shishikura, Curt McMullen, John Milnor和Mikhail Lyubich.
+
+\section{理论基础}
+
+\subsection{定义}
+Mandelbrot Set( 后称为$M$ )是所有使得$z=0$在二次映射$z_{n+1}=z_n^2+c$的迭代下保持有限的$c$的集合. 也就是说若$c \in \mathbb{C}$在Mandelbrot Set中, 那么从$z_0=0$开始, 重复进行上述迭代, $|z_n|$始终保持有界.
+
+\subsection{基本性质}
+
+\begin{property}
+Mandelbrot Set是一个紧集. 
+\label{prop:compact}
+\end{property}
+
+\begin{proof}
+因为我们有$$c \in M \iff |z_n| \le 2 (n \ge 0)$$
+\par 这是显然的, 当$z_n$模长大于2时, 这个序列会趋于无穷. 而同时由于$z_1=c$, 可得$c \in M \Rightarrow |c| \le 2$, 即$c$处在以原点为中心, 2为半径的闭圆盘中. 结合有界闭集是紧集, 可以推知.
+\end{proof}
+
+\begin{property}
+$M \cap \mathbb{R} = [-2, \frac{1}{4}]$.
+\end{property}
+\begin{proof}
+由性质\ref{prop:compact}知$M \cap \mathbb{R} \subseteq [-2, 2]$ , 下面分三步证明: \\
+1' $c \in [-2, 0] \Rightarrow c \in M$: 
+\par 易知$z_0=0, z_1=c$, 下面归纳证明$z_n \in [c, -c]$:
+\par 假设已知$z_{n-1} \in [c, -c]$, 那么显然成立
+$$z_n = z_{n-1}^2+c \ge c$$
+\par 且
+$$z_{n-1}^2+2c \le c^2+2c \le 0 \Rightarrow z_n = z_{n-1}^2+c \le -c$$
+\par 从而情况1得证. \\
+2' $c \in (0, \frac{1}{4}] \Rightarrow c \in M$:
+\par 归纳证明$z_n \in [0, \frac{1}{2}]$:
+\par 易知$z_n \ge 0$, 只需证$z_n \le \frac{1}{2}$即可. 同1讨论, 可假设$n \ge 1$时, 有$z_{n-1} \le \frac{1}{2}$. 那么有
+$$z_n=z_{n-1}^2+c \le \frac{1}{4}+\frac{1}{4} = \frac{1}{2}$$
+\par 从而情况2得证. \\
+3' $c \in (\frac{1}{4}, 2] \Rightarrow c \notin M$:
+\par 有
+$$z_{i+1}-z_i = z_i^2-z_i+c \ge c-\frac{1}{4}, \forall i \in \mathbb{N}.$$
+\par 故取$i=\lceil \frac{2}{c-\frac{1}{4}} \rceil$, 就有$z_{i+1} \ge 2$, 则根据前面的讨论, 有$c \notin M$.
+\par 从而情况3得证. 综上, 原命题得证.
+\end{proof}
+
+\begin{property}
+Mandelbrot Set是连通集.
+\end{property}
+\par Douady和Hubbard提供了此性质的证明.
+
+\section{算法}
+绘制Mandelbrot Set用到了\textbf{逃逸时间算法}, 通俗讲就是根据上一节的讨论, 我们知道所有的$c$都落在以原点为中心, 2为半径的闭圆盘中, 且若某次迭代后$|z_i| > 2$, 则必有$c \notin M$. 由此, 我们可以设置一个\textbf{逃逸时间}( escape time ), 即迭代多少次后还没出圈, 就认为$c \in M$. 由此, 容易形成以下算法:
+\begin{verbatim}
+for each c in C: //C is the complex plain
+    z = 0
+    ok = 1
+    for i = 1 to N: //N is the escape time
+        z = z * z + c
+        if |z| >= 2:
+            ok = 0
+    if ok = 1:
+        draw(c) //draw(p) means draw complex number p on the picture
+\end{verbatim}
+\par 了解位图( \verb!.bmp! )文件的标准格式, 并循环每个窗口上的像素点进行上述判断, 就可以编写程序生成画有Mandelbrot Set的位图了.
+
+\section{算例}
+通过运行上述程序, 将逃逸时间设为100, 并按仓库中\verb!README.md!中提示执行如下命令: 
+\begin{verbatim}
+    ./run.sh my.bmp 0 0 5
+\end{verbatim}
+\par 就会得到如下文件: 
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=5in]{南子谦_homework4.bmp}
+	\caption{my.bmp}
+\end{figure}
+\par 对参数进行修改, 可以改变图像的中心位置, 大小. 对代码中的参数进行修改, 可以更改逃逸时间, 逃逸半径等参数.
+
+\section{结论}
+作为一个数学问题, Mandelbrot Set已经因其美学价值在数学之外的领域愈发著名. 其通过应用简单的规则形成复杂的结构的特点吸引着人们不断探索它的奥秘. 
+
+\bibliographystyle{plain}
+\bibliography{hw4}
+
+\nocite{enwiki:1094796296}
+\nocite{朱华2011分形理论及其应用}
+
+\end{document}

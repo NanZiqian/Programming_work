@@ -1,0 +1,19 @@
+\newpage
+\section{问题确立}
+课本在\textbf{P43}中的\textsc{Try It Out}中简述了如何在Shell中创建
+一个简单的函数，代码如下：
+\lstset{language=bash}
+\begin{lstlisting}[caption = Try It Out]
+#!/bin/sh
+foo() {
+    echo "Function foo is executing"
+}
+echo "script starting"
+foo
+echo "script ended"
+exit 0
+\end{lstlisting}
+\par 
+并且在后续的测试中发现，在传值进入新的函数中时，\textbf{\$* \$1 \$2 $\cdots$} 的值会改变，
+直到函数执行完毕后再变回原来的值。但是课本中并没有讲到递归的实现情况。为此，我用Shell编写了一个
+汉诺塔的程序。分析其中对应的\textbf{\$* \$1 \$2 $\cdots$}的值的变化情况。

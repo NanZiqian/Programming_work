@@ -1,0 +1,6 @@
+﻿  源.cpp
+C:\Users\XXAlexMasonXX\Documents\Programing_work\test\Project1\Project1\源.cpp(300,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\XXAlexMasonXX\Documents\Programing_work\test\Project1\Project1\源.cpp(289): message : 在编译 类 模板 成员函数“void ThreeOrderedTree<int>::LevelOrderedDisplay(ThreeOrderedTree<int>::Node *)”时
+C:\Users\XXAlexMasonXX\Documents\Programing_work\test\Project1\Project1\源.cpp(286): message : 查看对正在编译的函数 模板 实例化“void ThreeOrderedTree<int>::LevelOrderedDisplay(ThreeOrderedTree<int>::Node *)”的引用
+C:\Users\XXAlexMasonXX\Documents\Programing_work\test\Project1\Project1\源.cpp(589): message : 查看对正在编译的 类 模板 实例化“ThreeOrderedTree<int>”的引用
+  Project1.vcxproj -> C:\Users\XXAlexMasonXX\Documents\Programing_work\test\Project1\x64\Debug\Project1.exe

@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[heading=true]{ctex}
+
+%% Language and font encodings
+
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{fontspec, listings}
+
+\usepackage{xcolor}
+\lstset{
+    basicstyle=\ttfamily,
+    numbers=left, 
+    numberstyle= \tiny, 
+    keywordstyle= \color{ blue!70},
+    commentstyle= \color{red!50!green!50!blue!50}, 
+    frame=shadowbox, 
+    rulesepcolor= \color{ red!20!green!20!blue!20} ,
+    escapeinside=``, 
+    xleftmargin=2em,xrightmargin=2em, aboveskip=1em,
+    framexleftmargin=2em
+}
+
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+
+\pagestyle{fancy} 
+\lhead{\CourseName{}: \Title{}}
+\lfoot{} 
+
+
+%% personal information
+\input{info/info.tex}
+
+\begin{document}
+\sloppy %自动换行
+%% 封面
+\input{title/title.tex}
+
+%% 目录
+%%\tableofcontents
+%%\setcounter{page}{0}
+%%\thispagestyle{empty} % 当前页不显示页码
+
+%% 正文
+\input{body/chapter1.tex}
+\input{body/chapter2.tex}
+
+\end{document}

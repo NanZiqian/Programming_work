@@ -1,0 +1,23 @@
+case 1:
+The endeavor of this present breath may buy
+/*from   Loves Labours Lost      line 12*/
+
+case 2:
+The queen this day here holds her parliament
+/*from   The Third part of King Henry the Sixth    line 59*/
+
+
+case 3:
+Therefore paucas pallabris let the world slide sessa
+/*from  The Taming of the Shrew    line 13*/
+
+case 4:
+BARDOLPH
+/*from  The Second part of King Henry the Fourth   the name of a character*/
+
+case 5:
+BASSIANUS
+/*from  Titus Andronicus    the name of a character*/ 
+
+
+ 

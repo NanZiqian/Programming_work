@@ -1,0 +1,78 @@
+
+\documentclass{ctexart}
+
+\usepackage{graphicx}
+
+\usepackage{amsmath}
+
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm}
+
+\title{作业二Shell中函数的编写与运用}
+
+\author{南子谦 \\ 信息与计算科学\quad 3210104676}
+
+\begin{document}
+
+\maketitle
+
+\section{引入}
+在书\textit{Beginning Linux Programming}中, 我们可以发现Shell作为脚本语言，仍然拥有大多数高级语言的功能；如同C++,Shell也能够编写函数。针对书P48中的例子，我获得了以下收获。
+
+\section{说明}
+书中\verb!yes_or_no!函数兼具了向屏幕输出内容和传输数值的功能, 其函数如下:
+\begin{verbatim}
+    yes_or_no()
+    {
+        echo "Is your name $*?"
+        while true
+        do
+            echo -n "Enter yes or no: "
+            read x
+            case "$x" in
+                y | yes ) return 0;;
+                n | no ) return 1;;
+                * ) echo "Answer yes or no!"
+            esac
+        done
+    }
+\end{verbatim}
+
+\par 然后其主程序如下：
+
+\begin{verbatim}
+    echo "Original parameters are $*"
+    if yes_or_no "$1"
+    then
+        echo "Hi $1, nice name"
+    else
+        echo "Never mind"
+    fi
+    exit 0
+\end{verbatim}
+
+\par 其输出如下:
+
+\begin{verbatim}
+    $ **./my_name Rick Neil**
+    Original parameters are Rick Neil
+    Is your name Rick ?
+    Enter yes or no: **yes**
+    Hi Rick, nice name
+    $
+\end{verbatim}
+
+\section{我的理解}
+在程序开始执行时, \verb!yes_or_no!被定义了,在分支语句\verb!if!中, 上述函数被执行, 且环境变量\verb!$1!传入函数. 函数接收传入的参数, 依据用户的输入给出返回值. 
+
+\section{总结}
+经过下午的研究, 我更加深入地了解了Shell语言, 并与以前学过的一些语言建立了联系. Shell语言的case就像是C语言的switch case,它们的返回操作
+同样是return.
+
+
+\bibliographystyle{plain}
+\bibliography{test}
+
+\cite{abcd2022}
+
+\end{document}

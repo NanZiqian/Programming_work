@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "测试效率"
+./test a
