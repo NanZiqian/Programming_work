@@ -1,0 +1,13 @@
+3
+1
+K.Weng  score1 5       score2 5       score3 5  score4 10 score5 19   score6 20   score7 18 score10 30#
+T.Dixon score1 4       score2 3       score3 2   score5 3   score6 2 score9 13#
+V.Chu   score1 3       score2 4       score3 5    score4 15  score9 13 #
+L.Tson  score1 4       score2 3       score3 4    score5 14   score7 3 score8 16#
+L.Lee   score1 3       score2 4       score3 3     score6 14  score4 10#
+I.Young score1 4       score2 2       score3 5   score4 15 score5 29  score6 24 #
+K.Hiro  score1 4       score2 2       score3 1    score6 7  score7 8#
+G.Ping  score1 4       score2 4       score3 4    score4 5  score10 20 score7 10#
+H.Gu    score1 2       score2 3       score3 4    score4 13 score7 13 score9 23#
+J.Jon   score1 5       score2 4       score3 3   score8 26 score10 26##
+2

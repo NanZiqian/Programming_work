@@ -1,0 +1,6 @@
+5
+1 pta DB 100 ADS 99 OOP 98
+2 vista DB 90 OOP 70
+3 pacman DB 95 ADS 90
+4 token FDS 99 ADS 90
+5 suse FDS 95 ICS 90

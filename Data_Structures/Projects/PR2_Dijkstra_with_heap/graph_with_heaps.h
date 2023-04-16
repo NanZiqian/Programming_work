@@ -184,7 +184,7 @@ public:
                 //cout<< v << " " << weight <<endl;
                 // If there is shorted path to v through u.
                 if (dist[0][v] > dist[0][u] + weight) {
-                    // Updating distance of v
+                    // 在这一步赋值，Updating distance of v，一开始都为INF，因此至少被赋值一次
                     dist[0][v] = dist[0][u] + weight;
                     //cout << dist[0][v]<<endl;
                     h.DecreaseKey(adj[v].m_HN, make_pair(dist[0][v], v));
