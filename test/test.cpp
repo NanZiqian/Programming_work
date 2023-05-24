@@ -1,13 +1,12 @@
 #include <iostream>
-#include<string>
+#include <vector>
 
 using namespace std;
 
 int main(){
-    string temp;
-    int a=10000;
-    temp='-';
-    temp = temp + to_string(a);
-    cout << temp << endl;
+
+    vector<int> a(3);
+    a.at(3);
+    cout << std::is_same<int, signed int>::value << endl;
     return 0;
 }
