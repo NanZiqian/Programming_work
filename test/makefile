@@ -1,2 +1,7 @@
-test: test.cpp
-	g++ -o ./output/test test.cpp
+cpp := test.cpp
+obj := test.o
+
+$(obj) : ${cpp}
+	@g++ -c $(cpp) -o $(obj)
+
+compile : $(obj)
