@@ -1,5 +1,5 @@
-#include <iostream>
-#include <string>
+#include <bits/stdc++.h>
+
 
 #include "tinyxml2.h"
 #include "tinyxml2.cpp"
@@ -60,7 +60,7 @@ void create_xml(const char* xmlPath){
 	//创建与此文档关联的新声明。对象的内存由文档管理。
 	//如果'text'参数为null，则使用标准声明:
 	//<?xml version="1.0" encoding="UTF-8"?>
-	XMLDeclaration* declaration = doc.NewDeclaration();
+	XMLDeclaration* declaration = XMLDocument().NewDeclaration();
 	//创建与此文档关联的新元素。元素的内存由文档管理。
 	XMLElement* element = doc.NewElement("ElementA");
 	//创建与此文档关联的新注释。注释的内存由文档管理。
@@ -156,8 +156,9 @@ void create_xml2(const char* xmlPath)
 	XMLElement* root = doc.NewElement("serialization");
 	doc.InsertEndChild(root);
 	//子节点
-	XMLElement* group_a = root->InsertNewChildElement("std_pair");
-	XMLElement* a_1 = group_a->InsertNewChildElement("fisrt val=\"2\"");
+	std::vector<int> temp;
+	XMLElement* group_a = root->InsertNewChildElement(typeid(temp).name());
+	XMLElement* a_1 = group_a->InsertNewChildElement("first val=\"2\"");
 	XMLElement* a_2 = group_a->InsertNewChildElement("second val=\"3.1000000000000001\"");
 	XMLElement* group_b = root->InsertNewChildElement("GroupB");
 	group_b->SetAttribute("Type", "B");

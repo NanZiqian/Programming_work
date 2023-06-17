@@ -18,9 +18,6 @@
     <ClInclude Include="..\..\..\OOP\8-1 Object Serialization\CustomizedClass.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\OOP\8-1 Object Serialization\RFC_4648.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\OOP\8-1 Object Serialization\Serialization.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -35,7 +32,10 @@
     <ClCompile Include="..\..\..\OOP\8-1 Object Serialization\Serialization.cpp">
       <Filter>头文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\OOP\8-1 Object Serialization\test.cpp">
+    <ClCompile Include="..\..\..\OOP\8-1 Object Serialization\tinyxml2.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OOP\8-1 Object Serialization\main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

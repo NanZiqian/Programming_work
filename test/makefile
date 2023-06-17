@@ -1,7 +1,5 @@
 cpp := test.cpp
-obj := test.o
+obj := test.exe
 
 $(obj) : ${cpp}
-	@g++ -c $(cpp) -o $(obj)
-
-compile : $(obj)
+	@g++  $(cpp) -o ./output/$(obj)

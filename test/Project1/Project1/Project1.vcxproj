@@ -128,14 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\OOP\8-1 Object Serialization\CustomizedClass.h" />
-    <ClInclude Include="..\..\..\OOP\8-1 Object Serialization\RFC_4648.h" />
     <ClInclude Include="..\..\..\OOP\8-1 Object Serialization\Serialization.h" />
     <ClInclude Include="..\..\..\OOP\8-1 Object Serialization\tinyxml2.h" />
     <ClInclude Include="..\..\..\OOP\8-1 Object Serialization\TypeJudging.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\OOP\8-1 Object Serialization\main.cpp" />
     <ClCompile Include="..\..\..\OOP\8-1 Object Serialization\Serialization.cpp" />
-    <ClCompile Include="..\..\..\OOP\8-1 Object Serialization\test.cpp" />
+    <ClCompile Include="..\..\..\OOP\8-1 Object Serialization\tinyxml2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
