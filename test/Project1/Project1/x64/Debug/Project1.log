@@ -1,0 +1,62 @@
+﻿  Serialization.cpp
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\TypeJudging.h(95,5): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(50,5): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(52,12): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(54,12): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(56,12): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(68,5): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(70,12): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(72,12): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(74,12): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(56,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(25,21): message : 此诊断出现在编译器生成的函数“void binSerial::Serialization::__serialize(std::ofstream &,const T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(66,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(25,21): message : 此诊断出现在编译器生成的函数“void binSerial::Serialization::__serialize(std::ofstream &,const T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(71,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(25,21): message : 此诊断出现在编译器生成的函数“void binSerial::Serialization::__serialize(std::ofstream &,const T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(79,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(25,21): message : 此诊断出现在编译器生成的函数“void binSerial::Serialization::__serialize(std::ofstream &,const T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(99,5): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(22,21): message : 此诊断出现在编译器生成的函数“void binSerial::Serialization::loopthr_tuple(std::ofstream &,const T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(137,5): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(40,21): message : 此诊断出现在编译器生成的函数“void binSerial::Deserialization::loopthr_tuple(std::ifstream &,T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(165,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(43,21): message : 此诊断出现在编译器生成的函数“void binSerial::Deserialization::__deserialize(std::ifstream &,T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(177,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(43,21): message : 此诊断出现在编译器生成的函数“void binSerial::Deserialization::__deserialize(std::ifstream &,T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(182,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(43,21): message : 此诊断出现在编译器生成的函数“void binSerial::Deserialization::__deserialize(std::ifstream &,T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(188,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(43,21): message : 此诊断出现在编译器生成的函数“void binSerial::Deserialization::__deserialize(std::ifstream &,T &)”中
+  test.cpp
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\TypeJudging.h(95,5): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(50,5): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(52,12): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(54,12): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(56,12): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(68,5): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(70,12): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(72,12): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\CustomizedClass.h(74,12): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(56,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(25,21): message : 此诊断出现在编译器生成的函数“void binSerial::Serialization::__serialize(std::ofstream &,const T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(66,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(25,21): message : 此诊断出现在编译器生成的函数“void binSerial::Serialization::__serialize(std::ofstream &,const T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(71,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(25,21): message : 此诊断出现在编译器生成的函数“void binSerial::Serialization::__serialize(std::ofstream &,const T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(79,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(25,21): message : 此诊断出现在编译器生成的函数“void binSerial::Serialization::__serialize(std::ofstream &,const T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(99,5): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(22,21): message : 此诊断出现在编译器生成的函数“void binSerial::Serialization::loopthr_tuple(std::ofstream &,const T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(137,5): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(40,21): message : 此诊断出现在编译器生成的函数“void binSerial::Deserialization::loopthr_tuple(std::ifstream &,T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(165,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(43,21): message : 此诊断出现在编译器生成的函数“void binSerial::Deserialization::__deserialize(std::ifstream &,T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(177,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(43,21): message : 此诊断出现在编译器生成的函数“void binSerial::Deserialization::__deserialize(std::ifstream &,T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(182,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(43,21): message : 此诊断出现在编译器生成的函数“void binSerial::Deserialization::__deserialize(std::ifstream &,T &)”中
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.cpp(188,10): warning C4984: "if constexpr" 是一种 C++17 语言扩展
+C:\Users\27608\Documents\Programming_work\OOP\8-1 Object Serialization\Serialization.h(43,21): message : 此诊断出现在编译器生成的函数“void binSerial::Deserialization::__deserialize(std::ifstream &,T &)”中
+  正在生成代码...
+  Project1.vcxproj -> C:\Users\27608\Documents\Programming_work\test\Project1\x64\Debug\Project1.exe

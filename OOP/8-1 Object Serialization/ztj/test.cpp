@@ -17,7 +17,7 @@ template <>
 struct std::tuple_size<MyClass>: integral_constant<size_t, 3> {};
 
 template <size_t Index>
-typename tuple_element<Index, MyClass>::type& std::get(MyClass& obj) {
+typename tuple_element<Index, MyClass>::type& get(MyClass& obj) {
     
     if constexpr (Index == 0) {
         return obj.idx;
@@ -29,7 +29,7 @@ typename tuple_element<Index, MyClass>::type& std::get(MyClass& obj) {
 }
 
 template <size_t Index>
-const typename tuple_element<Index, MyClass>::type& std::get(const MyClass& obj) {
+const typename tuple_element<Index, MyClass>::type& get(const MyClass& obj) {
     
     if constexpr (Index == 0) {
         return obj.idx;
@@ -51,7 +51,7 @@ int main()
 {
     vector<MyClass> a;
     for (int i = 0; i < 10; i++)
-        a.push_back((MyClass){i, "tommyzhao", vector<double>(1, 1.1)});
+        a.push_back(MyClass{i, "tommyzhao", vector<double>(1, 1.1)});
     // MyClass a{1, 3.14, "tommyzhao"};
     // string a = "abc";
     // unique_ptr<MyClass> a(new MyClass);

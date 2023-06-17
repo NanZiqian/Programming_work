@@ -18,10 +18,10 @@ template <>
 struct std::tuple_size<MyClass>;
 
 template <size_t Index>
-typename tuple_element<Index, MyClass>::type& std::get(MyClass& obj);
+typename tuple_element<Index, MyClass>::type& get(MyClass& obj);
 
 template <size_t Index>
-const typename tuple_element<Index, MyClass>::type& std::get(const MyClass& obj);
+const typename tuple_element<Index, MyClass>::type& get(const MyClass& obj);
 
 #endif
 //those four functions are mandatory.
