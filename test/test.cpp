@@ -5,8 +5,10 @@ using namespace std;
 
 int main(){
 
-    vector<int> a(3);
-    a.at(3);
-    cout << std::is_same<int, signed int>::value << endl;
-    return 0;
+    for(int i=0;i<=4;i++){
+        i++;
+        cout << i << endl;
+    }
+        
+        return 0;
 }
