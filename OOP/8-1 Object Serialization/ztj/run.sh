@@ -1,2 +1,2 @@
-g++ test.cpp -ltinyxml2 -w -o serializeTest
-./serializeTest
+g++ main.cpp -o main
+./main

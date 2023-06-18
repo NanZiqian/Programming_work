@@ -1,0 +1,5 @@
+<ElementA Level="A" Value="1992">ElementA text<!--ElementA comment--><ElementB Level="B">ElementB text<!--ElementB comment--></ElementB>
+</ElementA>
+
+<!--My TinyXml2 Test... ...-->Some Test
+<!Unknown>

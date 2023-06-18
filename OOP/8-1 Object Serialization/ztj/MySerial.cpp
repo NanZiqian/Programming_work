@@ -93,6 +93,9 @@ namespace Utility {
             obj.insert(x);
     }
     
+
+
+
     static const string base64_arr = 
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         "abcdefghijklmnopqrstuvwxyz"
@@ -194,6 +197,7 @@ void binSerial::Serialization::__proc_tuple(ofstream& out, const T& tuple)
     }
 }
 
+
 template <typename T>
 void binSerial::Serialization::__serialize(ofstream& out, const T &obj)
 {
@@ -231,6 +235,8 @@ void binSerial::Serialization::__serialize(ofstream& out, const T &obj)
         write_bin(out, obj);
     }
 }
+
+
 template <typename T>
 void binSerial::Serialization::Serialize(const T &obj, string dir)
 {
@@ -242,6 +248,10 @@ void binSerial::Serialization::Serialize(const T &obj, string dir)
     __serialize(out, obj);
     out.close();
 }
+
+
+
+
 
 template <typename T>
 void binSerial::Deserialization::read_bin(ifstream &in, T &obj)
@@ -330,6 +340,9 @@ void binSerial::Deserialization::Deserialize(T &obj, string dir)
 }
 
 
+
+
+
 //xmlSerial
 
 
@@ -379,6 +392,9 @@ pNode xmlSerial::Serialization::__serialize(const T& obj, docType xmlDoc)
     }
     return ret;
 }
+
+
+
 
 template<typename T>
 void xmlSerial::Serialization::Serialize_xml(const T &obj, string name, string dir, bool bin_mode)

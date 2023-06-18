@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMLSerializaiton>
+    <class>
+        <hasOutputMethod: Arithmetic or char>0</hasOutputMethod: Arithmetic or char>
+        <string>I love Elden ring.</string>
+        <container>
+            <class>
+                <hasOutputMethod: Arithmetic or char>0</hasOutputMethod: Arithmetic or char>
+                <hasOutputMethod: Arithmetic or char>100</hasOutputMethod: Arithmetic or char>
+            </class>
+        </container>
+        <container>
+            <hasOutputMethod: Arithmetic or char>100</hasOutputMethod: Arithmetic or char>
+        </container>
+        <container>
+            <class>
+                <hasOutputMethod: Arithmetic or char>0</hasOutputMethod: Arithmetic or char>
+                <hasOutputMethod: Arithmetic or char>100</hasOutputMethod: Arithmetic or char>
+            </class>
+        </container>
+        <container>
+            <class>
+                <hasOutputMethod: Arithmetic or char>0</hasOutputMethod: Arithmetic or char>
+                <hasOutputMethod: Arithmetic or char>100</hasOutputMethod: Arithmetic or char>
+            </class>
+        </container>
+    </class>
+</XMLSerializaiton>
