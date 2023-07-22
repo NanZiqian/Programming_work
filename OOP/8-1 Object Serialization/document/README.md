@@ -104,3 +104,11 @@ I've completed both bonus.
         //xmlSerial::Serialization::Serialize(a, "XMLSerializaiton","MyClass_a.xml",1);
         //xmlSerial::Deserialization::Deserialize(b, "MyClass_a.xml",1);
     ```
+
+### 实验心得
+
+本次实验不仅需要基本的模板知识，还涉及到了在编译阶段对模板参数类型的判定。原来不一定要程序运行阶段才能进行运算，在编译阶段已能进行一些逻辑判断，例如在TypeJudging.h中的true_Type和False_Type。当然很多知识我是从互联网上获得的，实验代码中也多多少少受到了他们的启发。
+
+我在上高级数据结构这门课时，我遇到了传入的模板参数是自定义类时，如何判断它是否有某函数对象的问题。而在这次实验学到的东西能够完美解决。
+
+其次，这次实验也让我对生活中我们常常能见到的.xml .json文件更加熟悉了，也学习了tinyxml2这一强大了工具。有这个工具，我们就能高效利用xml文件配置我们自己的一些项目了！
