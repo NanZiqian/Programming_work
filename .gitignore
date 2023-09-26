@@ -1,4 +1,4 @@
-test/:
-.vscode/:
-.vs/:
+test/
+.vscode/
+.vs/
 .DS_Store
